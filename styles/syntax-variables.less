@@ -1,44 +1,54 @@
+@import "colors";
+
 // This defines all syntax variables that syntax themes must implement when they
 // include a syntax-variables.less file.
 
 // General colors
-@syntax-text-color: #555;
-@syntax-cursor-color: black;
-@syntax-selection-color: #afc4da;
-@syntax-selection-flash-color: #69c;
-@syntax-background-color: white;
+@syntax-text-color: @base00;
+@syntax-cursor-color: @base03;
+@syntax-selection-color: @base2;
+@syntax-selection-flash-color: @base0;
+@syntax-background-color: @base3;
 
 // Guide colors
-@syntax-wrap-guide-color: rgba(85, 85, 85, .2);
-@syntax-indent-guide-color: rgba(85, 85, 85, .2);
-@syntax-invisible-character-color: rgba(85, 85, 85, .2);
+@syntax-wrap-guide-color: darken(@base2, 12%);
+@syntax-indent-guide-color: darken(@base2, 12%);
+@syntax-invisible-character-color: darken(@base2, 12%);
 
 // For find and replace markers
-@syntax-result-marker-color: #999;
-@syntax-result-marker-color-selected: black;
+@syntax-result-marker-color: @base1;
+@syntax-result-marker-color-selected: @base03;
 
 // Gutter colors
-@syntax-gutter-text-color: @syntax-text-color;
-@syntax-gutter-text-color-selected: @syntax-gutter-text-color;
-@syntax-gutter-background-color: white;
-@syntax-gutter-background-color-selected: rgba(255, 255, 134, 0.34);
+@syntax-gutter-text-color: @base00;
+@syntax-gutter-text-color-selected: @base01;
+@syntax-gutter-background-color: @base3;
+@syntax-gutter-background-color-selected: darken(@syntax-gutter-background-color, 4%);
 
 // For git diff info. i.e. in the gutter
-@syntax-color-renamed: #96CBFE;
-@syntax-color-added: #718C00;
-@syntax-color-modified: #ff982d;
-@syntax-color-removed: #D14;
+@syntax-color-added: @green;
+@syntax-color-renamed: @blue;
+@syntax-color-modified: @yellow;
+@syntax-color-removed: @red;
 
 // For language entity colors
-@syntax-color-variable: #008080;
-@syntax-color-constant: #099;
-@syntax-color-property: #333;
-@syntax-color-value: @syntax-color-constant;
-@syntax-color-function: #900;
-@syntax-color-method: @syntax-color-function;
-@syntax-color-class: #606aa1;
-@syntax-color-keyword: #222;
-@syntax-color-tag: #008080;
-@syntax-color-attribute: #458;
-@syntax-color-import: @syntax-color-keyword;
-@syntax-color-snippet: @syntax-color-constant;
+@syntax-color-variable: @blue;
+@syntax-color-constant: @yellow;
+@syntax-color-property: @yellow;
+@syntax-color-value: @cyan;
+@syntax-color-function: @blue;
+@syntax-color-method: @blue;
+@syntax-color-class: @blue;
+@syntax-color-keyword: @green;
+@syntax-color-tag: @blue;
+@syntax-color-attribute: @syntax-comment-color;
+@syntax-color-import: @red;
+@syntax-color-snippet: @syntax-color-keyword;
+
+
+// Custom variables
+// Warning: Don't use in packages
+
+@syntax-comment-color: @base1;
+@syntax-subtle-color: @base00;
+@syntax-emphasized-color: @base01;

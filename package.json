@@ -1,9 +1,9 @@
 {
-  "name": "atom-light-syntax",
+  "name": "swillis-light-syntax",
   "theme": "syntax",
   "version": "0.28.0",
-  "description": "A light syntax theme",
-  "repository": "https://github.com/atom/atom-light-syntax",
+  "description": "A shiny new light syntax theme",
+  "repository": "https://github.com/swillis/swillis-light-syntax",
   "license": "MIT",
   "engines": {
     "atom": ">0.40.0"
